@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="registrationForm">
+            <!-- Step 1: Personal Information -->
+            <div class="form-step form-step-active">
+                <h2>Personal Information</h2>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Hardik dandekar" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Event Details -->
+            <div class="form-step">
+                <h2>Event Details</h2>
+                <label for="event">Select Event</label>
+                <select id="event" name="event" required>
+                    <option value="">Choose an Event</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="conference">Conference</option>
+                </select>
+
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="form-step">
+                <h2>Confirmation</h2>
+                <p>Please review your information before submitting:</p>
+                <ul>
+                    <li><strong>Name:</strong> <span id="confirmName"></span></li>
+                    <li><strong>Email:</strong> <span id="confirmEmail"></span></li>
+                    <li><strong>Phone:</strong> <span id="confirmPhone"></span></li>
+                    <li><strong>Event:</strong> <span id="confirmEvent"></span></li>
+                    <li><strong>Date:</strong> <span id="confirmDate"></span></li>
+                </ul>
+
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+  
+</body>
+</html>
